@@ -1,6 +1,5 @@
 {{ template "theme/partials/head.html" . }}
 	<body class="theme-base-0b layout-reverse">
-{{ template "theme/partials/sidebar.html" . }}
 		<main class="content container" role="main">
 			<article class="post">
 				<h1>{{ .Title }}</h1>
@@ -8,5 +7,6 @@
 				{{ .Content }}
 			</article>
 		</main>
+{{ template "theme/partials/sidebar.html" . }}
 	</body>
 </html>

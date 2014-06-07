@@ -1,6 +1,5 @@
 {{ template "theme/partials/head.html" . }}
 	<body class="theme-base-0b layout-reverse">
-{{ template "theme/partials/sidebar.html" . }}
 		<main class="content container" role="main">
 			<ul class="posts">
 				{{ range .Data.Pages }}
@@ -8,5 +7,6 @@
 				{{ end }}
 			</ul>
 		</main>
+{{ template "theme/partials/sidebar.html" . }}
 	</body>
 </html>
