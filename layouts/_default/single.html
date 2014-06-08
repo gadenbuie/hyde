@@ -2,7 +2,7 @@
 	<body class="theme-base-0b layout-reverse">
 		<main class="content container" role="main">
 			<article class="post">
-				<h1>{{ .Title }}</h1>
+				<h1 class="post-title">{{ .Title }}</h1>
 				<time class="post-date" datetime="{{ .Date.Format "2006-01-02 15:04:05Z" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
 				{{ .Content }}
 			</article>
