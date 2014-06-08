@@ -5,7 +5,7 @@
 				{{ range .Data.Pages }}
 				<li>
 					<a href="{{ .Permalink }}">{{ .Title }}</a>
-					<time class="pull-right post-list" datetime="{{ .Date.Format "2006-01-02 15:04:05Z" }}">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+					<time class="pull-right post-list" datetime="{{ .Date.Format "2006-01-02 15:04:05Z" }}">{{ .Date.Format "Monday, 2 January, 2006" }}</time>
 					<p class="summary">{{ .Summary }}</p>
 				</li>
 				{{ end }}
