@@ -10,6 +10,11 @@
 				<nav>
 					<ul class="sidebar-nav">
 						<li><a href="/">Home</a> </li>
+						{{ range $key, $value := .Site.Indexes.categories }}
+						<li>
+							<a href="/categories/{{ $key | urlize }}">{{ $key | title }}</a>
+						</li>
+						{{ end }}
 						{{ range .Site.Menus.main }}
 						<li><a href="{{.Url}}"> {{ .Name }} </a></li>
 						{{end}}
