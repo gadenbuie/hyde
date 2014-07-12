@@ -83,8 +83,13 @@ html {
   font-size: 3.25rem;
 }
 
+.contact-head {
+  color: #fff;
+  margin-bottom: 0;
+}
+
 /* Sidebar nav */
-.sidebar-nav {
+.sidebar-nav, .contact-list {
   padding-left: 0;
   list-style: none;
 }
