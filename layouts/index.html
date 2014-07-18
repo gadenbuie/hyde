@@ -6,7 +6,7 @@
 				<ul>
 					{{ range $key, $value := .Site.Indexes.categories }}
 					<li>
-						<a href="/categories/{{ $key | urlize }}">{{ $key | title }}</a>
+						<a href="/categories/{{ $key | urlize }}/">{{ $key | title }}</a>
 					</li>
 					{{ end }}
 				</ul>
