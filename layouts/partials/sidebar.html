@@ -1,7 +1,7 @@
-		<aside class="sidebar">
+		<aside class="sidebar"  itemprop="author" itemscope itemtype="http://schema.org/Person">
 			<div class="container">
 				<header class="sidebar-about">
-					<h1><a href="/">{{ .Site.Title }}</a></h1>
+					<h1 itemprop="name">{{ .Site.Title }}</h1>
 					<p class="lead">
 						{{ with .Site.Params.Description }} {{.}} {{ else }}An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.{{end}}
 					</p>
@@ -9,7 +9,7 @@
 
 				<nav>
 					<ul class="sidebar-nav">
-						<li><a href="/">Home</a> </li>
+						<li><a href="/" itemprop="url">Home</a> </li>
 						{{ range $key, $value := .Site.Indexes.categories }}
 						<li>
 							<a href="/categories/{{ $key | urlize }}/">{{ $key | title }}</a>
@@ -24,8 +24,8 @@
 				<aside class="contact">
 					<h3 class="contact-head">Contact me</h3>
 					<ul class="contact-list">
-						<li><a href="mailto:alan@alanpearce.uk">Email</a></li>
-						<li><a href="https://twitter.com/alanpearceuk">Twitter</a></li>
+						<li><a href="mailto:alan@alanpearce.uk" itemprop="email">alan@alanpearce.uk</a></li>
+						<li><a itemprop="url" href="https://twitter.com/alanpearceuk">Twitter</a></li>
 					</ul>
 				</aside>
 
