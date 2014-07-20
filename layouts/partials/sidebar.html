@@ -1,32 +1,32 @@
-		<aside class="sidebar container" itemprop="author" itemscope itemtype="http://schema.org/Person">
-			<header class="sidebar-about">
+		<aside class="sidebar container">
+			<header class="sidebar-about" itemprop="author" itemscope itemtype="http://schema.org/Person">
 				<h1 itemprop="name">{{ .Site.Title }}</h1>
 				<p class="lead">
 					{{ with .Site.Params.Description }} {{.}} {{ else }}An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.{{end}}
 				</p>
+
+				<nav>
+					<ul class="sidebar-nav">
+						<li><a href="/" itemprop="url">Home</a> </li>
+						{{ range $key, $value := .Site.Indexes.categories }}
+						<li>
+							<a href="/categories/{{ $key | urlize }}/">{{ $key | title }}</a>
+						</li>
+						{{ end }}
+						{{ range .Site.Menus.main }}
+						<li><a href="{{.Url}}"> {{ .Name }} </a></li>
+						{{end}}
+					</ul>
+				</nav>
+
+				<aside class="contact">
+					<h3 class="contact-head">Contact me</h3>
+					<ul class="contact-list">
+						<li><a href="mailto:alan@alanpearce.uk"><span itemprop="email">alan@alanpearce.uk</span></a></li>
+						<li><a itemprop="url" href="https://twitter.com/alanpearceuk">Twitter</a></li>
+					</ul>
+				</aside>
 			</header>
-
-			<nav>
-				<ul class="sidebar-nav">
-					<li><a href="/" itemprop="url">Home</a> </li>
-					{{ range $key, $value := .Site.Indexes.categories }}
-					<li>
-						<a href="/categories/{{ $key | urlize }}/">{{ $key | title }}</a>
-					</li>
-					{{ end }}
-					{{ range .Site.Menus.main }}
-					<li><a href="{{.Url}}"> {{ .Name }} </a></li>
-					{{end}}
-				</ul>
-			</nav>
-
-			<aside class="contact">
-				<h3 class="contact-head">Contact me</h3>
-				<ul class="contact-list">
-					<li><a href="mailto:alan@alanpearce.uk"><span itemprop="email">alan@alanpearce.uk</span></a></li>
-					<li><a itemprop="url" href="https://twitter.com/alanpearceuk">Twitter</a></li>
-				</ul>
-			</aside>
 
 			<footer>
 				Licensed under a <a rel="license" itemprop="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
