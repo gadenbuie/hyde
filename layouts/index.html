@@ -1,6 +1,6 @@
 {{ template "theme/partials/head.html" . }}
 	<body class="theme-base-0b layout-reverse">
-		<main class="content container" role="main">
+		<main class="content container" role="main" itemscope itemtype="http://schema.org/Blog">
 			<section class="categories">
 				<h2>Categories</h2>
 				<ul>
@@ -15,9 +15,9 @@
 				<h2>Recent Posts</h2>
 				<ul>
 					{{ range .Data.Pages }}
-					<li>
-						<a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-						<time class="post-date">{{ .Date.Format "Monday, 2 January 2006" }}</time>
+					<li itemscope itemtype="http://schema.org/BlogPosting">
+						<a class="post-title" itemprop="url" href="{{ .RelPermalink }}"><span itemprop="name">{{ .Title }}<span></a>
+						<time class="post-date" itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
 					</li>
 					{{ end }}
 				</ul>
