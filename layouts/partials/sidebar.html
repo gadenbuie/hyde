@@ -29,7 +29,7 @@
 					<ul class="contact-list">
 						<li><a href="mailto:alan@alanpearce.uk"><span itemprop="email">alan@alanpearce.uk</span></a></li>
 						{{ range $text, $uri := .Site.Params.author.urls }}
-						<li><a itemprop="url" href="{{ $uri }}">{{ $text }}</a></li>
+						<li><a itemprop="url" href="{{ $uri }}" rel="me">{{ $text }}</a></li>
 						{{ end }}
 					</ul>
 				</aside>
