@@ -13,7 +13,7 @@
 				<nav>
 					<ul class="sidebar-nav">
 						<li><a href="/" itemprop="url">Home</a> </li>
-						{{ range $key, $value := .Site.Indexes.categories }}
+						{{ range $key, $value := .Site.Taxonomies.categories }}
 						<li>
 							<a href="/categories/{{ $key | urlize }}/">{{ $key | title }}</a>
 						</li>
