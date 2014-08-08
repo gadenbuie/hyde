@@ -27,7 +27,7 @@
 				<aside class="contact">
 					<h3 class="contact-head">Contact me</h3>
 					<ul class="contact-list">
-						<li><a href="mailto:alan@alanpearce.uk"><span itemprop="email">alan@alanpearce.uk</span></a></li>
+						<li><a href="mailto:alan@alanpearce.uk" rel="me"><span itemprop="email">alan@alanpearce.uk</span></a></li>
 						{{ range $text, $uri := .Site.Params.author.urls }}
 						<li><a itemprop="url" href="{{ $uri }}" rel="me">{{ $text }}</a></li>
 						{{ end }}
