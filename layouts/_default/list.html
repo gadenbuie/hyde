@@ -1,4 +1,4 @@
-{{ template "theme/partials/head.html" . }}
+{{ partial "head.html" . }}
 	<body class="theme-base-0b layout-reverse" itemscope itemtype="http://schema.org/Blog">
 		<main class="content container" role="main">
 			<h1 class="page-title">{{ .Title }}</h1>
@@ -12,6 +12,6 @@
 				{{ end }}
 			</ul>
 		</main>
-{{ template "theme/partials/sidebar.html" . }}
+{{ partial "sidebar.html" . }}
 	</body>
 </html>
