@@ -1,9 +1,9 @@
 		<aside class="sidebar container">
-			<header class="sidebar-about" itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<header class="sidebar-about h-card vcard" itemprop="author" itemscope itemtype="http://schema.org/Person">
 				{{ if eq .Title .Site.Title }}
-				<h1 class="site-title" itemprop="name">{{ .Site.Title }}</h1>
+				<h1 class="site-title u-name fn" itemprop="name">{{ .Site.Title }}</h1>
 				{{ else }}
-				<span class="site-title" itemprop="name">{{ .Site.Title }}</span>
+				<span class="site-title u-name fn" itemprop="name">{{ .Site.Title }}</span>
 				{{ end }}
 
 				<p class="lead">
@@ -12,7 +12,7 @@
 
 				<nav>
 					<ul class="sidebar-nav">
-						<li><a href="/" itemprop="url">Home</a> </li>
+						<li><a href="/" class="u-url url" itemprop="url">Home</a> </li>
 						{{ range $key, $value := .Site.Taxonomies.categories }}
 						<li>
 							<a href="/categories/{{ $key | urlize }}/">{{ $key | title }}</a>
@@ -27,7 +27,7 @@
 				<aside class="contact">
 					<h3 class="contact-head">Contact me</h3>
 					<ul class="contact-list">
-						<li><a href="mailto:alan@alanpearce.uk" rel="me"><span itemprop="email">alan@alanpearce.uk</span></a></li>
+						<li><a class="u-email email" href="mailto:alan@alanpearce.uk" rel="me"><span itemprop="email">alan@alanpearce.uk</span></a></li>
 						{{ range $text, $uri := .Site.Params.author.urls }}
 						<li><a itemprop="url" href="{{ $uri }}" rel="me">{{ $text }}</a></li>
 						{{ end }}
