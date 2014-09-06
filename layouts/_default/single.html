@@ -9,6 +9,23 @@
 				<main class="post-content e-content" itemprop="articleBody">
 					{{ .Content }}
 				</main>
+				<footer class="footer">
+					<span>
+						Category:
+						{{ range first 1 .Params.categories }}
+						<a class="p-category" href="/categories/{{ . | lower | urlize }}/">{{ . }}</a>
+						{{ end }}
+					</span>
+					<p>
+						Tags:
+						{{ range .Params.tags }}
+						<span itemprop="keywords">
+							<a class="p-category" href="/tags/{{ . | urlize }}/">{{ . }}</a>
+						</span>
+						{{ end }}
+
+					</p>
+				</footer>
 			</article>
 		</main>
 {{ partial "sidebar.html" . }}
