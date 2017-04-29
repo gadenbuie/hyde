@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 	<head>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
 		<link rel="stylesheet" href="/css/poole.css">
 		<link rel="stylesheet" href="/css/syntax.css">
 		<link rel="stylesheet" href="/css/hyde.css">
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
 		<link href="{{ .Permalink }}" rel="canonical">
 	</head>
