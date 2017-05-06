@@ -12,10 +12,8 @@
 
 				<nav>
 					<ul class="sidebar-nav">
-						<li><a href="/" class="u-url url" itemprop="url">Home</a> </li>
-						<li><a href="/post/" class="u-url url" itemprop="url">Posts</a> </li>
 						{{ range .Site.Menus.main }}
-						<li><a href="{{.URL}}"> {{ .Name }} </a></li>
+						<li><a href="{{.URL}}" class="u-url url" itemprop="url"> {{ .Name }} </a></li>
 						{{end}}
 					</ul>
 				</nav>
