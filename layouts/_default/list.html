@@ -7,7 +7,6 @@
 				<li itemscope itemtype="http://schema.org/BlogPosting">
 					<a class="post-title" itemprop="url" href="{{ .RelPermalink }}"><span itemprop="name">{{ .Title }}<span></a>
 					<time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
-					<p class="summary">{{ .Summary }}</p>
 				</li>
 				{{ end }}
 			</ul>
