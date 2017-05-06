@@ -21,9 +21,14 @@
 				<aside class="contact">
 					<h3 class="contact-head">Contact me</h3>
 					<ul class="contact-list">
-						<li><a class="u-email email" href="mailto:alan@alanpearce.uk" rel="me"><span itemprop="email">alan@alanpearce.uk</span></a></li>
-						{{ range $text, $uri := .Site.Params.author.urls }}
-						<li><a itemprop="url" href="{{ $uri }}" rel="me">{{ $text }}</a></li>
+						{{ range .Site.Menus.contact }}
+						<li>
+							{{ if (isset . "isEmail") }}
+							<a href="{{ .URL }}" class="u-email email" rel="me">{{ .Name }}</a>
+							{{ else }}
+							<a href="{{ .URL }}" itemprop="url" rel="me">{{ .Name }}</a>
+						{{ end }}
+						</li>
 						{{ end }}
 					</ul>
 				</aside>
