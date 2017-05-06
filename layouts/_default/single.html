@@ -10,12 +10,15 @@
 					{{ .Content }}
 				</main>
 				<footer class="footer">
+					{{ if .Params.categories }}
 					<span>
 						Category:
-						{{ range first 1 .Params.categories }}
+						{{ range .Params.categories }}
 						<a class="p-category" href="/categories/{{ . | lower | urlize }}/">{{ . }}</a>
 						{{ end }}
 					</span>
+					{{ end }}
+					{{ if .Params.tags }}
 					<p>
 						Tags:
 						{{ range .Params.tags }}
@@ -25,6 +28,7 @@
 						{{ end }}
 
 					</p>
+					{{ end }}
 				</footer>
 			</article>
 		</main>
