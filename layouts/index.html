@@ -3,7 +3,7 @@
 		<main class="content container" role="main">
 			<section class="recent">
 				<h2>Recent Posts</h2>
-				<ul>
+				<ul class="posts">
 					{{ range .Data.Pages }}
 					<li itemscope itemtype="http://schema.org/BlogPosting">
 						<a class="post-title" itemprop="url" href="{{ .RelPermalink }}"><span itemprop="name">{{ .Title }}</span></a>
