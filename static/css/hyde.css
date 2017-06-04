@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "PT Sans", "Ubuntu Sans", "Liberation Sans", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-family: "PT Sans", "Ubuntu Sans", "Liberation Sans", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
 }
 @media (min-width: 48em) {
   html {
@@ -43,6 +43,10 @@ html {
   html {
     font-size: 20px;
   }
+}
+
+code,pre {
+    font-family: "SFMono-Regular", "Lucida Console", "Liberation Mono", Menlo, Courier, monospace;
 }
 
 
