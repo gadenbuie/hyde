@@ -1,7 +1,7 @@
 		<aside class="sidebar container">
 			<header class="sidebar-about h-card vcard p-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
 				{{ if (isset .Site.Author "image") }}
-				<a class="u-url u-uid" href="/">
+				<a class="u-url u-uid" href="{{ .Site.BaseURL }}">
 					<img class="u-photo" src="{{ .Site.Author.image }}" width=128 height=128 />
 				</a>
 				{{ end }}
