@@ -91,6 +91,13 @@ code,pre {
   display: block;
 }
 
+.u-photo {
+  margin: auto;
+  margin-bottom: 1rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
 .contact-head {
   color: #fff;
   margin-bottom: 0;
