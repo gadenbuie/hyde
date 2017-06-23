@@ -23,7 +23,7 @@
 					<ul class="contact-list">
 						{{ range .Site.Menus.contact }}
 						<li>
-							{{ if (isset . "isEmail") }}
+							{{ if hasPrefix .URL "mailto:" }}
 							<a href="{{ .URL }}" class="u-email email" rel="me">{{ .Name }}</a>
 							{{ else }}
 							<a href="{{ .URL }}" itemprop="url" rel="me">{{ .Name }}</a>
