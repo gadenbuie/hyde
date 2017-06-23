@@ -19,7 +19,7 @@
 				<nav>
 					<ul class="sidebar-nav">
 						{{ range .Site.Menus.main }}
-						<li><a href="{{.URL}}" class="u-url url"{{ if eq .URL "/" }} rel="me" {{ end }}itemprop="url"> {{ .Name }} </a></li>
+						<li><a href="{{.URL}}" class="u-url url"{{ if eq .URL "/" }} rel="me"{{ end }} itemprop="url"> {{ .Name }} </a></li>
 						{{end}}
 					</ul>
 				</nav>
