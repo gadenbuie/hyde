@@ -14,5 +14,5 @@
 		<link rel="stylesheet" href="/css/syntax.css">
 		<link rel="stylesheet" href="/css/hyde.css">
 		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
-		<link href="{{ .Permalink }}" rel="canonical">
+		<link href="{{ if .IsPage }}{{ .Permalink | replaceRE "/$" "" }}{{ else }}{{ .Permalink }}{{ end }}" rel="canonical">
 	</head>
