@@ -1,5 +1,5 @@
 {{ partial "head.html" . }}
-	<body class="theme-base-0b layout-reverse" itemscope itemtype="http://schema.org/Blog">
+	<body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}" itemscope itemtype="http://schema.org/Blog">
 		<main class="content container" role="main">
 			<section class="recent">
 				<h2>Recent Posts</h2>

@@ -1,5 +1,5 @@
 {{ partial "head.html" . }}
-	<body class="theme-base-0b layout-reverse h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}} h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 		<main class="content container" role="main">
 			<article class="post">
 				<header>

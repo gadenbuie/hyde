@@ -3,7 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>{{ if ne .Title .Site.Title }}{{ .Title }} · {{ end }}{{ .Site.Title }}</title>
+
+		{{ if .IsHome }}
+		<title>{{ .Site.Title }}</title>
+		{{ else }}
+		<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+		{{ end }}
+
 		<link rel="stylesheet" href="/css/poole.css">
 		<link rel="stylesheet" href="/css/syntax.css">
 		<link rel="stylesheet" href="/css/hyde.css">
