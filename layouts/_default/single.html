@@ -1,14 +1,14 @@
 {{ partial "head.html" . }}
-	<body class="theme-base-0b layout-reverse h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+	<body class="theme-base-0b layout-reverse h-entry">
 		<main class="content container" role="main">
 			<article class="post">
 				<header>
 					<a class="u-url" href="{{ .Permalink | replaceRE "/$" "" }}">
-						<h1 class="post-title p-name" itemprop="name">{{ .Title }}</h1>
+						<h1 class="post-title p-name">{{ .Title }}</h1>
 					</a>
-					<time class="post-date dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}" itemprop="datePublished">{{ .Date.Format "Monday, 2 January 2006" }}</time>
+					<time class="post-date dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
 				</header>
-				<main class="post-content e-content" itemprop="articleBody">
+				<main class="post-content e-content">
 					{{ .Content }}
 				</main>
 				<footer class="footer">
@@ -24,9 +24,7 @@
 					<p>
 						Tags:
 						{{ range .Params.tags }}
-						<span itemprop="keywords">
-							<a class="p-category" href="/tags/{{ . | urlize }}/">{{ . }}</a>
-						</span>
+						<a class="p-category" href="/tags/{{ . | urlize }}/">{{ . }}</a>
 						{{ end }}
 
 					</p>

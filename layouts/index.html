@@ -1,13 +1,13 @@
 {{ partial "head.html" . }}
-	<body class="theme-base-0b layout-reverse" itemscope itemtype="http://schema.org/Blog">
+	<body class="theme-base-0b layout-reverse">
 		<main class="content container" role="main">
 			<section class="recent">
 				<h2>Recent Posts</h2>
 				<ul class="posts">
 					{{ range first 10 .Data.Pages }}
-					<li itemscope itemtype="http://schema.org/BlogPosting">
-						<a class="post-title" itemprop="url" href="{{ .RelPermalink | replaceRE "/$" "" }}"><span itemprop="name">{{ .Title }}</span></a>
-						<time class="post-date" itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
+					<li>
+						<a class="post-title" href="{{ .RelPermalink | replaceRE "/$" "" }}">{{ .Title }}</a>
+						<time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format "Monday, 2 January 2006" }}</time>
 					</li>
 					{{ end }}
 				</ul>

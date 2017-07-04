@@ -1,5 +1,5 @@
 		<aside class="sidebar container">
-			<header class="sidebar-about h-card vcard p-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<header class="sidebar-about h-card vcard p-author">
 				{{ if (isset .Site.Author "image") }}
 				<a class="u-url u-uid" href="{{ .Site.BaseURL }}">
 					<img class="u-photo" src="{{ .Site.Author.image }}" width=128 height=128 />
@@ -7,9 +7,9 @@
 				{{ end }}
 
 				{{ if eq .Title .Site.Title }}
-				<h1 class="site-title u-name fn" itemprop="name">{{ .Site.Title }}</h1>
+				<h1 class="site-title u-name fn">{{ .Site.Title }}</h1>
 				{{ else }}
-				<span class="site-title u-name fn" itemprop="name">{{ .Site.Title }}</span>
+				<span class="site-title u-name fn">{{ .Site.Title }}</span>
 				{{ end }}
 
 				<p class="lead p-note">
@@ -19,7 +19,7 @@
 				<nav>
 					<ul class="sidebar-nav">
 						{{ range .Site.Menus.main }}
-						<li><a href="{{.URL}}" class="u-url url" itemprop="url"> {{ .Name }} </a></li>
+						<li><a href="{{.URL}}" class="u-url url"> {{ .Name }} </a></li>
 						{{end}}
 					</ul>
 				</nav>
@@ -32,7 +32,7 @@
 							{{ if hasPrefix .URL "mailto:" }}
 							<a href="{{ .URL }}" class="u-email email" rel="me">{{ .Name }}</a>
 							{{ else }}
-							<a href="{{ .URL }}" itemprop="url" rel="me">{{ .Name }}</a>
+							<a href="{{ .URL }}" rel="me">{{ .Name }}</a>
 						{{ end }}
 						</li>
 						{{ end }}
@@ -41,6 +41,6 @@
 			</header>
 
 			<footer>
-				Licensed under a <a rel="license" itemprop="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+				Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 			</footer>
 		</aside>
