@@ -1,7 +1,7 @@
 		<aside class="sidebar container">
 			<header class="sidebar-about h-card vcard p-author">
 				{{ if (isset .Site.Author "image") }}
-				<a class="u-url u-uid" href="{{ .Site.BaseURL }}">
+				<a class="u-url u-uid" rel="me" href="{{ .Site.BaseURL }}">
 					<img class="u-photo" src="{{ .Site.Author.image }}" width=128 height=128 />
 				</a>
 				{{ end }}
@@ -19,7 +19,7 @@
 				<nav>
 					<ul class="sidebar-nav">
 						{{ range .Site.Menus.main }}
-						<li><a href="{{.URL}}" class="u-url url"> {{ .Name }} </a></li>
+						<li><a href="{{.URL}}"> {{ .Name }} </a></li>
 						{{end}}
 					</ul>
 				</nav>
@@ -32,7 +32,7 @@
 							{{ if hasPrefix .URL "mailto:" }}
 							<a href="{{ .URL }}" class="u-email email" rel="me">{{ .Name }}</a>
 							{{ else }}
-							<a href="{{ .URL }}" rel="me">{{ .Name }}</a>
+							<a href="{{ .URL }}" class="u-url url" rel="me">{{ .Name }}</a>
 						{{ end }}
 						</li>
 						{{ end }}
