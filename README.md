@@ -1,9 +1,7 @@
 # Hyde
 
-Hyde is a brazen two-column [hugo](http://hugo.spf13.com) theme based on the [Jekyll](http://jekyllrb.com) theme of the same name.
+> Hyde is a brazen two-column [hugo](http://hugo.spf13.com) theme based on the [Jekyll](http://jekyllrb.com) theme of the same name.
 It pairs a prominent sidebar with uncomplicated content.
-
-![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
 
 This theme was forked from [alanpearce/hyde](https://github.com/alanpearce/hyde) and modified to work better with [blogdown](https://github.com/rstudio/blogdown).
 
@@ -19,6 +17,8 @@ This will create a new Hugo site using this theme and will launch an example web
 For the complete blogdown documentation, see <https://bookdown.org/yihui/blogdown/themes.html>.
 
 I made a few specific changes to the original [Hyde theme](https://github.com/spf13/hyde), all of which are demonstrated in the [config.toml](exampleSite/config.toml) in the `exampleSite` folder.
+
+![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
 
 ## Contents
 
