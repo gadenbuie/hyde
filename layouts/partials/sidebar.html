@@ -2,14 +2,18 @@
 			<header class="sidebar-about h-card vcard p-author">
 				{{ if (isset .Site.Author "image") }}
 				<a class="u-url u-uid" rel="me" href="{{ .Site.BaseURL }}">
-					<img class="u-photo" src="{{ .Site.Author.image }}" width=128 height=128 />
+					<img class="u-photo" src="{{ .Site.Author.image | absURL }}" width=128 height=128 />
 				</a>
 				{{ end }}
 
 				{{ if eq .Title .Site.Title }}
-				<h1 class="site-title u-name fn">{{ .Site.Title }}</h1>
+				<h1 class="site-title u-name fn">
+				  <a class="u-url u-uid" rel="me" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+				</h1>
 				{{ else }}
-				<span class="site-title u-name fn">{{ .Site.Title }}</span>
+				<span class="site-title u-name fn">
+				  <a class="u-url u-uid" rel="me" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+			  </span>
 				{{ end }}
 
 				<p class="lead p-note">
@@ -25,14 +29,28 @@
 				</nav>
 
 				<aside class="contact">
-					<h3 class="contact-head">Contact me</h3>
+				  {{ if .Site.Params.contactHeader }}
+					  <h3 class="contact-head">{{ .Site.Params.contactHeader }}</h3>
+				  {{ else }}
+					  <hr />
+					{{end}}
 					<ul class="contact-list">
 						{{ range .Site.Menus.contact }}
 						<li>
 							{{ if hasPrefix .URL "mailto:" }}
-							<a href="{{ .URL }}" class="u-email email" rel="me">{{ .Name }}</a>
+  							<i class='fa fa-envelope fa-fw'></i>
+  							<a href="{{ .URL }}" class="u-email email" rel="me">
+  							  {{ .Name }}
+  							</a>
 							{{ else }}
-							<a href="{{ .URL }}" class="u-url url" rel="me">{{ .Name }}</a>
+							  {{ if .Pre }}
+							    {{ .Pre }}
+							  {{ else }}
+  						    <i class='fa fa-{{lower .Name }} fa-fw'></i>
+  						  {{ end }}
+  							<a href="{{ .URL }}" class="u-url url" rel="me">
+  							  {{ .Name }}
+  							</a>
 						{{ end }}
 						</li>
 						{{ end }}
@@ -40,7 +58,5 @@
 				</aside>
 			</header>
 
-			<footer>
-				Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-			</footer>
+			<footer>{{ with .Site.Params.Copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}}. All rights reserved. {{end}}</footer>
 		</aside>
