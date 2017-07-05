@@ -29,7 +29,7 @@
 						</ul>
 					</nav>
 
-					{{ if in .Site.Menus "contact" }}
+					{{ if .Site.Menus.contact }}
 						<aside class="contact">
 						  {{ if .Site.Params.contactHeader }}
 							  <h3 class="contact-head">{{ .Site.Params.contactHeader }}</h3>
