@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-US">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,6 +10,28 @@
 		<title>{{ .Title }} &middot; {{ .Site.Title }}</title>
 		{{ end }}
 
+		{{ if eq .URL "/" }}
+		<meta property="description" content="{{ .Site.Params.description }}">
+		{{ else }}
+			{{ if .Description }}
+			<meta property="description" content="{{ .Description }}">
+			{{ end }}
+		{{ end }}
+
+		{{ if .Keywords }}
+		<meta property="keywords" content ="{{ delimit .Keywords ", " }}">
+		{{ end }}
+
+		{{ if .RSSLink }}
+		<link href="{{ .RSSLink | relURL }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+		{{ end }}
+		{{ partial "head_highlightjs" . }}
+		{{ range .Site.Params.customCSS }}
+		<link rel="stylesheet" href="{{ . | relURL }}">
+		{{ end }}
+		{{ partial "head_custom" . }}
+
+		<link rel="stylesheet" href="{{ "font-awesome/css/font-awesome.min.css" | absURL }}" type="text/css">
 		<link rel="stylesheet" href="/css/poole.css">
 		<link rel="stylesheet" href="/css/syntax.css">
 		<link rel="stylesheet" href="/css/hyde.css">
