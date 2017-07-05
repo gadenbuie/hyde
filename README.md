@@ -5,6 +5,20 @@ It pairs a prominent sidebar with uncomplicated content.
 
 ![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
 
+This theme was forked from [alanpearce/hyde](https://github.com/alanpearce/hyde) and modified to work better with [blogdown](https://github.com/rstudio/blogdown).
+
+The easiest way to get started is to create a new (empty) RStudio project, then
+
+```r
+devtools::install_github('rstudio/blogdown')  # install blogdown
+blogdown::new_site(theme = 'gadenbuie/hyde')
+```
+
+This will create a new Hugo site using this theme and will launch an example website in the RStudio Viewer.
+
+For the complete blogdown documentation, see <https://bookdown.org/yihui/blogdown/themes.html>.
+
+I made a few specific changes to the original [Hyde theme](https://github.com/spf13/hyde), all of which are demonstrated in the [config.toml](exampleSite/config.toml) in the `exampleSite` folder.
 
 ## Contents
 
