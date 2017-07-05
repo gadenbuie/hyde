@@ -260,3 +260,119 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a {
   color: #8f5536;
 }
+
+
+/* ---- Solarized Colors ---- */
+
+/* solarized base03 */
+.solarized-base03 .sidebar {
+  background-color: #002b36;
+}
+.solarized-base03 .content a {
+  color: #002b36;
+}
+/* solarized base02 */
+.solarized-base02 .sidebar {
+  background-color: #073642;
+}
+.solarized-base02 .content a {
+  color: #073642;
+}
+/* solarized base01 */
+.solarized-base01 .sidebar {
+  background-color: #586e75;
+}
+.solarized-base01 .content a {
+  color: #586e75;
+}
+/* solarized base00 */
+.solarized-base00 .sidebar {
+  background-color: #657b83;
+}
+.solarized-base00 .content a {
+  color: #657b83;
+}
+/* solarized base0 */
+.solarized-base0 .sidebar {
+  background-color: #839496;
+}
+.solarized-base0 .content a {
+  color: #839496;
+}
+/* solarized base1 */
+.solarized-base1 .sidebar {
+  background-color: #93a1a1;
+}
+.solarized-base1 .content a {
+  color: #93a1a1;
+}
+/* solarized base2 */
+.solarized-base2 .sidebar {
+  background-color: #eee8d5;
+}
+.solarized-base2 .content a {
+  color: #eee8d5;
+}
+/* solarized base3 */
+.solarized-base3 .sidebar {
+  background-color: #fdf6e3;
+}
+.solarized-base3 .content a {
+  color: #fdf6e3;
+}
+/* solarized yellow */
+.solarized-yellow .sidebar {
+  background-color: #b58900;
+}
+.solarized-yellow .content a {
+  color: #b58900;
+}
+/* solarized orange */
+.solarized-orange .sidebar {
+  background-color: #cb4b16;
+}
+.solarized-orange .content a {
+  color: #cb4b16;
+}
+/* solarized red */
+.solarized-red .sidebar {
+  background-color: #dc322f;
+}
+.solarized-red .content a {
+  color: #dc322f;
+}
+/* solarized magenta */
+.solarized-magenta .sidebar {
+  background-color: #d33682;
+}
+.solarized-magenta .content a {
+  color: #d33682;
+}
+/* solarized violet */
+.solarized-violet .sidebar {
+  background-color: #6c71c4;
+}
+.solarized-violet .content a {
+  color: #6c71c4;
+}
+/* solarized blue */
+.solarized-blue .sidebar {
+  background-color: #268bd2;
+}
+.solarized-blue .content a {
+  color: #268bd2;
+}
+/* solarized cyan */
+.solarized-cyan .sidebar {
+  background-color: #2aa198;
+}
+.solarized-cyan .content a {
+  color: #2aa198;
+}
+/* solarized green */
+.solarized-green .sidebar {
+  background-color: #859900;
+}
+.solarized-green .content a {
+  color: #859900;
+}
