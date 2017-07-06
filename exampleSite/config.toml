@@ -32,6 +32,11 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
     # Or comment out to use <hr> instead
     contactHeader = "Contact Me"
 
+    # Change Hyde theme
+    #themeColor = "theme-base-08"
+    # Overide or add custom CSS styles
+    #customCSS = "/css/custom.css"
+
     # options for highlight.js (version, additional languages, and theme)
     highlightjsVersion = "9.11.0"
     highlightjsCDN = "//cdn.bootcss.com"
