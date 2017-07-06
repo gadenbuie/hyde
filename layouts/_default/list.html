@@ -14,18 +14,16 @@
         {{ range .Data.Pages.GroupByDate "2006" }}
         <h2 class="archive-title">{{ .Key }}</h2>
         {{ range .Pages }}
-        <article class="archive-item">
-          <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
-          <span class="archive-item-date">
-            {{ .Date.Format "Jan 1" }}
-          </span>
-        </article>
+          <article class="archive-item">
+            <a href="{{ .RelPermalink }}" class="archive-item-link">{{ .Title }}</a>
+            <time class="pull-right post-list">{{ .Date.Format "January 2" }}</time>
+          </article>
         {{ end }}
         {{ end }}
       </div>
       {{ end }}
 
 		</main>
-{{ partial "sidebar.html" . }}
+  {{ partial "sidebar.html" . }}
 	</body>
 </html>
